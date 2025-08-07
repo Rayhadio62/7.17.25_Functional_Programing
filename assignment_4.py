@@ -20,9 +20,9 @@ annual_sales = annual_sales = [{'product': item['product'],'total_sales': item['
  
 
 # Test your result
-print("Annual Sales Totals:")
-for item in annual_sales:
-    print(f"  {item['product']}: {item['total_sales']} units")
+# print("Annual Sales Totals:")
+# for item in annual_sales:
+#     print(f"  {item['product']}: {item['total_sales']} units")
 # Expected Output:
 # Annual Sales Totals:
 #   Laptop: 690 units
@@ -34,12 +34,12 @@ for item in annual_sales:
 # Task 4b: Find High-Performing Products-----------------------------
 # TODO: Use list comprehension to find products with total sales > 600
 # Return just the product names-------------------------------
-# high_performers = [# YOUR CODE HERE for product in sales_data # YOUR CONDITION HERE]
+high_performers = [item['product'] for item in annual_sales if item['total_sales'] > 600] 
 
 # # Test your result---------------------------
-# print("High-Performing Products (>600 units):")
-# for product in high_performers:
-#     print(f"  {product}")
+print("High-Performing Products (>600 units):")
+for product in high_performers:
+    print(f"  {product}")
 
 
 # Expected Output:
